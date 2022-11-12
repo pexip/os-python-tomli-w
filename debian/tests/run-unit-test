@@ -1,0 +1,21 @@
+#!/bin/bash
+set -ex
+
+pkg=python3-tomli-w
+
+START="$(dirname "$(dirname "$(dirname "$(readlink -fm "$0")")")")"
+
+if [ "$AUTOPKGTEST_TMP" = "" ] ; then
+  AUTOPKGTEST_TMP=$(mktemp -d /tmp/${pkg}-test.XXXXXX)
+  trap "rm -rf $AUTOPKGTEST_TMP" 0 INT QUIT ABRT PIPE TERM
+fi
+
+cd "$AUTOPKGTEST_TMP"
+
+cp -r ${START}/tests ./
+cp -r ${START}/benchmark ./
+
+for py3vers in $(py3versions -s); do
+    echo "Testing with $py3vers:"
+    $py3vers -m pytest -v
+done

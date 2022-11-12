@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+# DH_VERBOSE := 1
+export LC_ALL=C.UTF-8
+export PYBUILD_SYSTEM=flit
+export PYBUILD_TEST_PYTEST=1
+export PYBUILD_TEST_ARGS=-n auto -k "not test_own_pyproject" {dir}/tests
+
+%:
+	dh $@ --with python3 --buildsystem pybuild

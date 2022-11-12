@@ -1,0 +1,26 @@
+python-tomli-w (1.0.0-1~bpo11+1) bullseye-backports; urgency=medium
+
+  * Rebuild for bullseye-backports.
+  * Needed to update flit backport
+  * Update debian/gbp.conf for backports branch
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 12 Nov 2022 09:05:41 -0500
+
+python-tomli-w (1.0.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update autopkgtest to run for all supported python3 versions
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 04 Dec 2021 22:49:14 -0500
+
+python-tomli-w (0.4.0-2) unstable; urgency=medium
+
+  * Source only upload to allow binary to be built on buildd
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 01 Dec 2021 10:55:19 -0500
+
+python-tomli-w (0.4.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1000675)
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 26 Nov 2021 20:36:06 -0500

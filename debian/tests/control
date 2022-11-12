@@ -1,0 +1,3 @@
+Tests: run-unit-test
+Depends: python3-all, python3-tomli-w, python3-tomli, python3-pytest-xdist
+Restrictions: allow-stderr
