@@ -6,11 +6,12 @@ Testsuite: autopkgtest-pkg-python
 Uploaders: Scott Kitterman <scott@kitterman.com>
 Build-Depends: debhelper-compat (= 13),
                dh-python,
+               pybuild-plugin-pyproject,
                python3-all,
                flit (>= 3.2),
                python3-tomli,
                python3-pytest-xdist
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-tomli-w
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-tomli-w.git
 Homepage: https://github.com/hukkin/tomli-w
@@ -19,6 +20,6 @@ Rules-Requires-Root: no
 Package: python3-tomli-w
 Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends}
-Description: lil' TOML witer for Python
+Description: lil' TOML writer for Python
  Tomli-w is a Python library for writing TOML. https://toml.io/
  Tomli-w is fully compatible with TOML v1.0.0. https://toml.io/en/v1.0.0
