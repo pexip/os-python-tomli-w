@@ -1,0 +1,55 @@
+repos:
+- repo: https://github.com/executablebooks/mdformat
+  rev: 427df9181bd4d8e65c1108b912ad47a81628f03b  # frozen: 0.7.10
+  hooks:
+  - id: mdformat
+    additional_dependencies:
+    - mdformat-toc
+    - mdformat-gfm
+    - mdformat-black
+- repo: https://github.com/asottile/yesqa
+  rev: 644ede78511c02fc6f8e03e014cc1ddcfbf1e1f5  # frozen: v1.2.3
+  hooks:
+  - id: yesqa
+    additional_dependencies:
+    - flake8-bugbear
+    - flake8-builtins
+    - flake8-comprehensions
+- repo: https://github.com/PyCQA/isort
+  rev: fd5ba70665a37ec301a1f714ed09336048b3be63  # frozen: 5.9.3
+  hooks:
+  - id: isort
+- repo: https://github.com/psf/black
+  rev: 911470a610e47d9da5ea938b0887c3df62819b85  # frozen: 21.9b0
+  hooks:
+  - id: black
+- repo: https://github.com/myint/docformatter
+  rev: 67919ee01837761f2d954d7fbb08c12cdd38ec5a  # frozen: v1.4
+  hooks:
+  - id: docformatter
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: 38b88246ccc552bffaaf54259d064beeee434539  # frozen: v4.0.1
+  hooks:
+  - id: check-yaml
+- repo: https://github.com/pre-commit/pygrep-hooks
+  rev: 6f51a66bba59954917140ec2eeeaa4d5e630e6ce  # frozen: v1.9.0
+  hooks:
+  - id: python-use-type-annotations
+  - id: python-check-blanket-noqa
+  - id: python-check-blanket-type-ignore
+- repo: https://github.com/PyCQA/flake8
+  rev: cbeb4c9c4137cff1568659fcc48e8b85cddd0c8d  # frozen: 4.0.1
+  hooks:
+  - id: flake8
+    additional_dependencies:
+    - flake8-bugbear
+    - flake8-builtins
+    - flake8-comprehensions
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: 5cf22ccb774a8be8f47dfe4c1e8c4f177c608cbf  # frozen: v0.910-1
+  hooks:
+  - id: mypy
+    args: ["--scripts-are-modules"]
+    additional_dependencies:
+    - pytest
+    - tomli
