@@ -1,16 +1,23 @@
+python-tomli-w (1.0.0-2) unstable; urgency=medium
+
+  [ Sandro Tosi ]
+  * debian/control
+    - fix typo in short description (witer -> writer)
+
+  [ Scott Kitterman ]
+  * debian/control
+    - Add pybuild-plugin-pyproject to build-depends
+    - Bump standards-version to 4.6.1 with no further changes
+  * debian/rules
+    - Drop environment variable to specify pybuild flit plugin
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 22 Nov 2022 15:44:43 -0500
+
 python-tomli-w (1.0.0-1~bpo11+1pexip1) pexip; urgency=medium
 
   * Prepare Pexip packaging
 
  -- Huw Jones <huw@pexip.com>  Tue, 06 Dec 2022 15:12:53 +0000
-
-python-tomli-w (1.0.0-1~bpo11+1) bullseye-backports; urgency=medium
-
-  * Rebuild for bullseye-backports.
-  * Needed to update flit backport
-  * Update debian/gbp.conf for backports branch
-
- -- Scott Kitterman <scott@kitterman.com>  Sat, 12 Nov 2022 09:05:41 -0500
 
 python-tomli-w (1.0.0-1) unstable; urgency=medium
 
